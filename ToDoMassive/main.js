@@ -3,12 +3,12 @@ const todo = {
 	"create a new practice task": "In Progress", 
 	"make a bed": "Done", 
 	"write a post": "To Do", },
-addTask(key ,number) { if (key.lenght > 50)
+addTask(key ,number) { if (key.length > 50)
     {console.log("NumberMax");
-} else (this.list.key === "")
-{
-    console.log("NoTask");
-}
+        return;
+} 
+  
+
         this.list[key] = number;
 },
 changeStatus (key, number) {
@@ -20,10 +20,10 @@ deleteTask(key) {
 showList() {
     console.log(this.list)
 }
- }
+}
  
 
 todo.changeStatus("write a post" , "Done");
-todo.addTask("go play pc", "CS");
+todo.addTask("go99999999999999999999999999999999999999999999999999999999999999999999999999999999999999", "CS");
 todo.deleteTask("make a bed");
 todo.showList();    
