@@ -3,7 +3,12 @@ const todo = {
 	"create a new practice task": "In Progress", 
 	"make a bed": "Done", 
 	"write a post": "To Do", },
-addTask(key ,number) {
+addTask(key ,number) { if (key.lenght > 50)
+    {console.log("NumberMax");
+} else (this.list.key === "")
+{
+    console.log("NoTask");
+}
         this.list[key] = number;
 },
 changeStatus (key, number) {
