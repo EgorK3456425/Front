@@ -6,10 +6,12 @@ const todo = {
 addTask(key ,number) 
 {
     if (key.length > 50) {
-        console.log(`${key.length},Слишком большое назание задачи`); 
+        console.log(`${key.length},Слишком большое назание задачи`);
+        return; 
 };
     if (this.list[key]) {
         console.log(`${key}, Задача уже есть`);
+        return;
     }
        
     
@@ -17,8 +19,9 @@ addTask(key ,number)
         this.list[key] = number;
 },
 changeStatus (key, number) {
-    if (this.list[key]) {
-        console.log(`${key}, Имя задачи есть`);
+    if (!this.list[key]) {
+        console.log(`${key}, Задачи нету`);
+        return;
     }
     
     
@@ -26,11 +29,17 @@ changeStatus (key, number) {
 
 },
 deleteTask(key) {
+
+    if (!this.list[key]) {
+        console.log(`${key}, Задачи нет`);
+        return;
+    
+}
     delete this.list[key];
 },
 showList() {
     console.log(this.list)
-}
+},
 }
  
 
